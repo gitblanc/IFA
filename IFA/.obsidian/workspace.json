@@ -18,19 +18,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "33addef27647f579",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.6.7"
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -157,8 +146,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "33addef27647f579",
+  "active": "289c6eed2337316f",
   "lastOpenFiles": [
+    "Labs/img/Pasted image 20240917101612.png",
+    "Labs/img/Pasted image 20240917101424.png",
+    "Labs/img/Pasted image 20240917100934.png",
+    "Labs/img/Pasted image 20240917091346.png",
+    "Labs/img",
+    "Labs/img/Pasted image 20240917090934.png",
     "Labs/P1.md",
     "Labs/img",
     "Labs"
