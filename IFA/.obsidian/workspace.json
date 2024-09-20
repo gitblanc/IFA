@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Labs/P1.md",
+                "file": "Labs/P2.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Labs/P1.md",
+                "file": "Labs/P2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Labs/P1.md",
+                "file": "Labs/P2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Labs/P1.md"
+                "file": "Labs/P2.md"
               }
             }
           }
@@ -148,6 +148,13 @@
   },
   "active": "289c6eed2337316f",
   "lastOpenFiles": [
+    "Labs/P1.md",
+    "Labs/P2.md",
+    "Labs/pdfs/IFA-P1-2024-25_signed.pdf",
+    "Labs/pdfs/IFA-P2-2024-25_signed.pdf",
+    "Labs/pdfs",
+    "Labs/IFA-P1-2024-25_signed.pdf",
+    "Labs/IFA-P2-2024-25_signed.pdf",
     "Labs/img/Pasted image 20240917175131.png",
     "Labs/img/Pasted image 20240917174941.png",
     "Labs/img/Pasted image 20240917174855.png",
@@ -159,8 +166,6 @@
     "Labs/img/Pasted image 20240917100934.png",
     "Labs/img/Pasted image 20240917091346.png",
     "Labs/img",
-    "Labs/img/Pasted image 20240917090934.png",
-    "Labs/P1.md",
     "Labs/img",
     "Labs"
   ]
