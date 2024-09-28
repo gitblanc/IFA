@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "50970533e37ba2fb",
@@ -146,15 +147,19 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e20e2a98d5ebe553",
+  "active": "dc31b770f4e2d3dc",
   "lastOpenFiles": [
+    "img/Pasted image 20240928123207.png",
+    "img/Pasted image 20240928122427.png",
+    "img/Pasted image 20240928121155.png",
+    "img/Pasted image 20240928115639.png",
+    "img/Pasted image 20240928110315.png",
     "img/Pasted image 20240927131908.png",
     "img/Pasted image 20240927131320.png",
     "Pasted image 20240927131227.png",
     "Pasted image 20240927131155.png",
     "img/Pasted image 20240927130827.png",
     "img/Pasted image 20240927130732.png",
-    "img/Pasted image 20240927123034.png",
     "P1.md"
   ]
 }
