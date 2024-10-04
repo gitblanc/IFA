@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<AutopsyCase>
+  <SchemaVersion>6.0</SchemaVersion>
+  <CreatedDate>2024/10/04 14:26:04 (CEST)</CreatedDate>
+  <ModifiedDate>2024/10/04 14:26:05 (CEST)</ModifiedDate>
+  <CreatedByAutopsyVersion>4.21.0</CreatedByAutopsyVersion>
+  <SavedByAutopsyVersion>4.21.0</SavedByAutopsyVersion>
+  <Case>
+    <Name>p2-uo285176_20241004_142604</Name>
+    <DisplayName>P2-uo285176</DisplayName>
+    <Number>1</Number>
+    <Examiner>Eduardo Blanco Bielsa</Examiner>
+    <ExaminerPhone>666666666</ExaminerPhone>
+    <ExaminerEmail>uo285176@uniovi.es</ExaminerEmail>
+    <CaseNotes/>
+    <CaseType>Single-user case</CaseType>
+    <Database/>
+    <CaseDatabase>autopsy.db</CaseDatabase>
+    <TextIndex/>
+  </Case>
+  <ContentProvider>
+    <Name/>
+  </ContentProvider>
+  <OriginalCase/>
+</AutopsyCase>

@@ -18,6 +18,18 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "ca20e258da076495",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Terminología.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ]
       }
@@ -69,8 +81,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "50970533e37ba2fb",
@@ -147,8 +158,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "dc31b770f4e2d3dc",
+  "active": "e20e2a98d5ebe553",
   "lastOpenFiles": [
+    "img/Pasted image 20241004131443.png",
+    "Terminología.md",
+    "P2.md",
+    "img/Pasted image 20241004125613.png",
     "img/Pasted image 20240928123207.png",
     "img/Pasted image 20240928122427.png",
     "img/Pasted image 20240928121155.png",
@@ -158,8 +173,6 @@
     "img/Pasted image 20240927131320.png",
     "Pasted image 20240927131227.png",
     "Pasted image 20240927131155.png",
-    "img/Pasted image 20240927130827.png",
-    "img/Pasted image 20240927130732.png",
     "P1.md"
   ]
 }
