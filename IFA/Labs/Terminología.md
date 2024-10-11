@@ -13,4 +13,7 @@ title: Terminología
 
 ![IANA](img/Pasted%20image%2020241004125613.png)
 
-`^`: acento circunflejo
+- `^`: acento circunflejo
+- **Carving**: es la técnica forense que permite la identificación y extracción de archivos basada en contenido en lugar de la información almacenada en estructuras del sistema de ficheros donde residen (ej.: inodos en Linux). La extracción de ficheros a partir de bloques no asignados por el sistema de ficheros se realiza identificando conjuntos de bytes únicos (*file signatures*) que aparecen al principio y/o al final del archivo y que están asociados con un tipo de fichero específico. Esta técnica también permite detectar lo que se conoce con el nombre de *file mismatch*, que ocurre cuando se intenta modificar la extensión de un archivo para evitar su detección.
+- **EXIF** (*Exchangeable Image File Format*): es un estándar para formatos de archivos de imagen utilizado en cámaras digitales y móviles. Se refiere a los metadatos que se almacenan en las imágenes digitales, proporcionando información sobre la captura de la imagen
+- **MIME Type**: Es un estándar diseñado para indicar el tipo de información que presenta un archivo o un conjunto de datos en Internet. En otras palabras, un MIME Type (*Multipurpose Internet Mail Extensions*) es un identificador que especifica el tipo de contenido de un archivo, como texto, imagen, audio, video, etc.

@@ -20,6 +20,18 @@
             }
           },
           {
+            "id": "902658f61d223ef0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "P3.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "ca20e258da076495",
             "type": "leaf",
             "state": {
@@ -160,19 +172,20 @@
   },
   "active": "e20e2a98d5ebe553",
   "lastOpenFiles": [
-    "img/Pasted image 20241004131443.png",
+    "img/Pasted image 20241011141739.png",
+    "img/Pasted image 20241011141637.png",
+    "img/Pasted image 20241011141507.png",
+    "P3.md",
+    "img/Pasted image 20241011140219.png",
+    "img/Pasted image 20241011140107.png",
     "Terminología.md",
+    "img/Pasted image 20241011132658.png",
+    "img/Pasted image 20241011131906.png",
+    "img/Pasted image 20241011131503.png",
+    "img/Pasted image 20241011131437.png",
+    "img/Pasted image 20241011131416.png",
+    "img/Pasted image 20241011131354.png",
     "P2.md",
-    "img/Pasted image 20241004125613.png",
-    "img/Pasted image 20240928123207.png",
-    "img/Pasted image 20240928122427.png",
-    "img/Pasted image 20240928121155.png",
-    "img/Pasted image 20240928115639.png",
-    "img/Pasted image 20240928110315.png",
-    "img/Pasted image 20240927131908.png",
-    "img/Pasted image 20240927131320.png",
-    "Pasted image 20240927131227.png",
-    "Pasted image 20240927131155.png",
     "P1.md"
   ]
 }
