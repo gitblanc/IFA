@@ -16,7 +16,9 @@
                 "file": "P2.md",
                 "mode": "source",
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "P2"
             }
           },
           {
@@ -28,7 +30,9 @@
                 "file": "P3.md",
                 "mode": "source",
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "P3"
             }
           },
           {
@@ -40,10 +44,13 @@
                 "file": "Terminología.md",
                 "mode": "source",
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "Terminología"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -63,7 +70,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
             }
           },
           {
@@ -78,7 +87,9 @@
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "Search"
             }
           },
           {
@@ -86,14 +97,17 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "50970533e37ba2fb",
@@ -109,7 +123,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "P2.md",
+                "file": "P3.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +131,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for P3"
             }
           },
           {
@@ -126,10 +142,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "P2.md",
+                "file": "P3.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from P3"
             }
           },
           {
@@ -140,7 +158,9 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
             }
           },
           {
@@ -149,8 +169,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "P2.md"
-              }
+                "file": "P3.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of P3"
             }
           }
         ]
@@ -170,22 +192,22 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e20e2a98d5ebe553",
+  "active": "902658f61d223ef0",
   "lastOpenFiles": [
-    "img/Pasted image 20241011141739.png",
-    "img/Pasted image 20241011141637.png",
-    "img/Pasted image 20241011141507.png",
-    "P3.md",
-    "img/Pasted image 20241011140219.png",
-    "img/Pasted image 20241011140107.png",
+    "img/Pasted image 20241018141028.png",
+    "img/Pasted image 20241018135835.png",
     "Terminología.md",
-    "img/Pasted image 20241011132658.png",
-    "img/Pasted image 20241011131906.png",
-    "img/Pasted image 20241011131503.png",
-    "img/Pasted image 20241011131437.png",
-    "img/Pasted image 20241011131416.png",
-    "img/Pasted image 20241011131354.png",
+    "P3.md",
+    "img/Pasted image 20241018133824.png",
+    "img/Pasted image 20241018133642.png",
+    "img/Pasted image 20241018133337.png",
+    "img/Pasted image 20241018133235.png",
+    "img/Pasted image 20241018132729.png",
     "P2.md",
+    "img/Pasted image 20241018130059.png",
+    "img/Pasted image 20241018125707.png",
+    "img/Pasted image 20241018125554.png",
+    "img/Pasted image 20241018124143.png",
     "P1.md"
   ]
 }

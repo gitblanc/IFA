@@ -17,3 +17,17 @@ title: Terminología
 - **Carving**: es la técnica forense que permite la identificación y extracción de archivos basada en contenido en lugar de la información almacenada en estructuras del sistema de ficheros donde residen (ej.: inodos en Linux). La extracción de ficheros a partir de bloques no asignados por el sistema de ficheros se realiza identificando conjuntos de bytes únicos (*file signatures*) que aparecen al principio y/o al final del archivo y que están asociados con un tipo de fichero específico. Esta técnica también permite detectar lo que se conoce con el nombre de *file mismatch*, que ocurre cuando se intenta modificar la extensión de un archivo para evitar su detección.
 - **EXIF** (*Exchangeable Image File Format*): es un estándar para formatos de archivos de imagen utilizado en cámaras digitales y móviles. Se refiere a los metadatos que se almacenan en las imágenes digitales, proporcionando información sobre la captura de la imagen
 - **MIME Type**: Es un estándar diseñado para indicar el tipo de información que presenta un archivo o un conjunto de datos en Internet. En otras palabras, un MIME Type (*Multipurpose Internet Mail Extensions*) es un identificador que especifica el tipo de contenido de un archivo, como texto, imagen, audio, video, etc.
+- **File Signature**: a file signature is data used to identify or verify the contents of a file
+	- [List of file signatures](https://en.wikipedia.org/wiki/List_of_file_signatures)
+- **inodos**: punteros a los almacenamiento secundario (HDD)
+- ***Sectores vs bloques***:
+	- **Sector**: Un sector es una unidad de almacenamiento física en un disco duro o dispositivo de almacenamiento secundario. Cada sector ocupa una ubicación específica en el disco y consta de tres partes:
+		- Encabezado del sector
+		- Código de corrección de errores (ECC)
+		- Área de almacenamiento de datos
+	- **Bloque**: Un bloque es una agrupación lógica de sectores en un disco duro o dispositivo de almacenamiento. Los bloques se utilizan para almacenar archivos y datos en el disco. Un bloque puede contener uno o varios sectores, dependiendo del tamaño del bloque y del tamaño del sector.
+- **MAC Times**: MAC times, also known as metadata timestamps, are pieces of file system metadata that record when certain events related to a computer file occurred most recently. These events typically include:
+	- Modification (the data in the file was changed) ==Es la más fiable==
+	- Access (some part of the file was read) ==Algo menos fiable==
+	- Metadata change (the file’s attributes or permissions were modified)
+
