@@ -30,4 +30,13 @@ title: Terminología
 	- Modification (the data in the file was changed) ==Es la más fiable==
 	- Access (some part of the file was read) ==Algo menos fiable==
 	- Metadata change (the file’s attributes or permissions were modified)
-
+- **Imagen física**: adquirir el móvil al completo en una estructura de datos
+- **Imagen lógica**: adquirir solamente los datos de usuario en una estructura de datos
+- **Feature phone**: *los clásicos teléfonos de tapa con teclitas*
+	- Los que usa prácticamente todo el mundo son **Smartphones**
+- **MCC** (*Mobile Country Code*): identificación única de país en relación con las redes móviles
+- Servicios de comunicaciones móviles:
+	- **CG/CC/CL**: los datos están controlados, y no pasan por Internet
+	- **OTT** (Over-The-Top): quiere decir "*a través de los datos del móvil*", es decir, apps, servicios... que funcionan por el servicio de datos que proporciona el operador . Los datos *NO* están controlados y pasan por Internet
+- **Telefonía pública**: cuando se usa el icono de llamar del teléfono
+- **IIOT** (Industrial Internet of Things)
