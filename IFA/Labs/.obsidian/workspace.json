@@ -8,34 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "e20e2a98d5ebe553",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "P2.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "P2"
-            }
-          },
-          {
-            "id": "902658f61d223ef0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "P3.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "P3"
-            }
-          },
-          {
             "id": "3aa79014495de64d",
             "type": "leaf",
             "state": {
@@ -47,6 +19,20 @@
               },
               "icon": "lucide-file",
               "title": "P4"
+            }
+          },
+          {
+            "id": "c043a84f035568a0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "P5a.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "P5a"
             }
           },
           {
@@ -205,20 +191,24 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "902658f61d223ef0",
+  "active": "c043a84f035568a0",
   "lastOpenFiles": [
     "P4.md",
-    "img/Pasted image 20241025141642.png",
-    "img/Pasted image 20241025141552.png",
-    "img/Pasted image 20241025140912.png",
+    "P5a.md",
+    "pdfs/TrazabilidadRedesMóviles.pdf",
+    "pdfs/TrazabilidadRedesMóviles.pdf.crdownload",
+    "pdfs/IFA-P5a-2024-25_signed.pdf",
+    "img/Pasted image 20241115132744.png",
+    "img/Pasted image 20241115132706.png",
+    "img/Pasted image 20241115132111.png",
+    "img/Pasted image 20241115131921.png",
+    "img/Pasted image 20241115131902.png",
+    "img/Pasted image 20241115131829.png",
+    "img/Pasted image 20241115131549.png",
+    "img/Pasted image 20241115130544.png",
+    "img/Pasted image 20241115125740.png",
+    "img/Pasted image 20241115125612.png",
     "Terminología.md",
-    "img/Pasted image 20241025140047.png",
-    "img/Pasted image 20241025140006.png",
-    "img/Pasted image 20241025135823.png",
-    "img/Pasted image 20241025135229.png",
-    "img/Pasted image 20241025134203.png",
-    "img/Pasted image 20241025134100.png",
-    "img/Pasted image 20241025133501.png",
     "P3.md",
     "P2.md",
     "P1.md"
