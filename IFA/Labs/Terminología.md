@@ -40,3 +40,9 @@ title: Terminología
 	- **OTT** (Over-The-Top): quiere decir "*a través de los datos del móvil*", es decir, apps, servicios... que funcionan por el servicio de datos que proporciona el operador . Los datos *NO* están controlados y pasan por Internet
 - **Telefonía pública**: cuando se usa el icono de llamar del teléfono
 - **IIOT** (Industrial Internet of Things)
+- **Ingeniería preventa**: trabajar en el departamento de ventas de una compañía. Acompañamos a ejecutivos en reuniones para ayudarles a explicar a clientes el producto y recoger requisitos
+- **BSS**: *Business Support System*, todas las plataformas que permiten operar el negocio
+- **OSS**: *Operations Subsystem*, parte técnica
+- **SUITE TCP/IP**:
+- **Redes OT**: las redes industriales
+- **PDU**: *Protocol Data Unit*, paquete de cada capa de la arquitectura de protocolos
