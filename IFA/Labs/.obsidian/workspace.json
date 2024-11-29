@@ -64,7 +64,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -205,25 +205,26 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3aa79014495de64d",
+  "active": "c043a84f035568a0",
   "lastOpenFiles": [
-    "P5a.md",
-    "img/Pasted image 20241122132456.png",
+    "img/Pasted image 20241129161111.png",
+    "img/Pasted image 20241129160637.png",
+    "img/Pasted image 20241129160347.png",
+    "img/Pasted image 20241129160331.png",
+    "img/Pasted image 20241129160111.png",
+    "img/Pasted image 20241129155605.png",
+    "img/Pasted image 20241129155417.png",
+    "img/Pasted image 20241129154651.png",
+    "img/Pasted image 20241129154130.png",
+    "img/Pasted image 20241129153329.png",
+    "img/Pasted image 20241129153001.png",
     "Terminología.md",
-    "img/Pasted image 20241122132244.png",
-    "img/Pasted image 20241122132041.png",
+    "P5a.md",
     "P4.md",
     "P3.md",
     "pdfs/TrazabilidadRedesMóviles.pdf",
     "pdfs/TrazabilidadRedesMóviles.pdf.crdownload",
     "pdfs/IFA-P5a-2024-25_signed.pdf",
-    "img/Pasted image 20241115132744.png",
-    "img/Pasted image 20241115132706.png",
-    "img/Pasted image 20241115132111.png",
-    "img/Pasted image 20241115131921.png",
-    "img/Pasted image 20241115131902.png",
-    "img/Pasted image 20241115131829.png",
-    "img/Pasted image 20241115131549.png",
     "P2.md",
     "P1.md"
   ]

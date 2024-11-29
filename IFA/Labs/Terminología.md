@@ -46,3 +46,9 @@ title: Terminología
 - **SUITE TCP/IP**:
 - **Redes OT**: las redes industriales
 - **PDU**: *Protocol Data Unit*, paquete de cada capa de la arquitectura de protocolos
+- **Perfil híbrido de tipo de nodo** (Windows):
+	- **Broadcast**: se envía a todos los equipos de la red
+	- **Unicast**: sólo se envía a un equipo
+- **APIPA**: da una configuración de IPv4 a Microsoft y permite el networking de equipos Microsoft cuando no hay DHCP
+- **LEASE** (*concesión obtenida/expira*): te otorgo esta configuración desde hoy hasta X tiempo.
+- **DUAL STACK**: las redes y los sistemas trabajan en IPv4 e IPv6
