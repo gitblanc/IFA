@@ -44,7 +44,6 @@ title: Terminología
 - **BSS**: *Business Support System*, todas las plataformas que permiten operar el negocio
 - **OSS**: *Operations Subsystem*, parte técnica
 - **SUITE TCP/IP**:
-- **Redes OT**: las redes industriales
 - **PDU**: *Protocol Data Unit*, paquete de cada capa de la arquitectura de protocolos
 - **Perfil híbrido de tipo de nodo** (Windows):
 	- **Broadcast**: se envía a todos los equipos de la red
@@ -52,3 +51,7 @@ title: Terminología
 - **APIPA**: da una configuración de IPv4 a Microsoft y permite el networking de equipos Microsoft cuando no hay DHCP
 - **LEASE** (*concesión obtenida/expira*): te otorgo esta configuración desde hoy hasta X tiempo.
 - **DUAL STACK**: las redes y los sistemas trabajan en IPv4 e IPv6
+- **REDES IT**: lo que nosotros analizamos comúnmente. Hay otros dos tipos que son:
+	- **REDES OT**: redes telemáticas industriales, con protocolos especiales
+	- **REDES CT**: redes de telecomunicaciones
+	- *Wireshark* puede trabajar en las IT y en las CT, en las OT tiene más problemas
