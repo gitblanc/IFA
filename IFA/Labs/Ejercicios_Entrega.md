@@ -1,6 +1,7 @@
 ---
 title: Ejercicios de la Entrega Final
 ---
+
 >[!Info]
 >Cada ejercicio tiene los siguientes subapartados:
 >- **Análisis de la documentación**: en su caso, si fue necesario examinar documentación vinculada a la pregunta/apartado/ejercicio para proceder a su resolución. Indicar qué documentación se examinó/consultó.
@@ -9,6 +10,7 @@ title: Ejercicios de la Entrega Final
 >- **Resultados obtenidos**: : justificados mediante capturas de pantalla y explicaciones aclaratorias que el alumno@ crea conveniente. Las capturas de pantalla deberán ser claras, visibles (sin necesidad de aumentar el documento al 150%), sin ambigüedades y explicativas de las acciones realizadas, donde quede claro que se realizan bajo la autoría del alumno (por ejemplo, haciendo visible el nombre de la cuenta que utilizó para realizar el ejercicio). Aquellos ejercicios que se realicen mediante línea de comandos, deberán mostrar el prompt donde deberá aparecer OBLIGATORIAMENTE la cuenta con el nombre del alumno.
 >- **Conclusiones preliminares**: si las hubiere, que se deduzcan de los análisis practicados (ej.: se encontraron 12 imágenes borradas de tales tipos y tal tamaño).
 >- **Conclusiones**: resumen de los resultados obtenidos para cada ejercicio/pregunta/apartado a resolver.
+
 
 > [!Warning]
 > Mi SO utilizado en mi equipo personal es un Debian puro, por lo que todos los ejercicios en los que salgan capturas en el SO Windows serán en una máquina virtual, es decir, los ejercicios donde la máquina host es Windows en mi caso es una máquina virtual.
@@ -229,13 +231,16 @@ dd if=L0_Graphic.dd of=imagen_extraida.jpg bs=1 skip=$((0x01bc8c00)) count=$((0x
 >![](img/Pasted%20image%2020241220185809.png)
 
 
+>[!Note]
+>La Tasa de muestreo se ha obtenido con **Exiftool**
+
 | Nombre       | Tamaño del fichero (Bytes) | Tipo MIME      | Autor        | Género      | Duración (HH:MM:SS) | Tasa Muestreo |
 | ------------ | -------------------------- | -------------- | ------------ | ----------- | ------------------- | ------------- |
-| f0010020.mp3 | 51698                      | audio/mpeg     | -            | -           | 00:00:16            | -             |
-| f0010029.mp3 | 526545                     | audio/mpeg     | Kevin McLeod | Electronica | 00:00:16            | -             |
-| f0022057.wav | 4612660                    | audio/vnd.wave | -            | -           | 00:00:26            | -             |
+| f0010020.mp3 | 51698                      | audio/mpeg     | -            | -           | 00:00:16            | 44,1 kHz      |
+| f0010029.mp3 | 526545                     | audio/mpeg     | Kevin McLeod | Electronica | 00:00:16            | 44,1 kHz      |
+| f0022057.wav | 4612660                    | audio/vnd.wave | -            | -           | 00:00:26            | 44,1 kHz      |
 | b0069824.wma | 715776                     | audio/x-ms-wma | -            | -           | 00:01:05            | -             |
-| f0047085.au  | 9243672                    | audio/basic    | -            | -           | 00:00:52            | -             |
+| f0047085.au  | 9243672                    | audio/basic    | -            | -           | 00:00:52            | 44,1 kHz      |
 
 
 ## 14. Recuperación de evidencias borradas mediante metadatos con Autopsy.
@@ -410,10 +415,71 @@ Nació el 23 de Abril:
 
 Nació el 12 de Diciembre como se ve en la imagen del apartado anterior.
 
+## 9. Análisis de imagen lógica de smartphone con Aleapp. (apartados: aa, bb, cc, dd, ee, ff, gg, hh, ii, jj)
 
-## 2. Análisis de imagen lógica de smartphone con Aleapp. (apartados: aa, bb, cc, dd, ee, ff, gg, hh, ii, jj)
+>[!Warning]
+>Este ejercicio se realiza con una máquina virtual de Windows 10 en un host Debian
 
+> [!Note]
+> Para este ejercicio se usará la ingestión realizada para la clase presencial, no se hará una nueva debido al tiempo de realización que conlleva volver a hacer la ingestión con ALEAPP.
 
+- Se usará el siguiente recurso: "*Recursos Prácticas->Práctica 4 -> Pixel3-
+Data.tar*", que se corresponde con un tar de la carpeta data de un móvil
+modelo Google Pixel 3.
+
+- aa) ¿Cuántos marcadores (bookmarks) tiene registrados Chrome?
+
+Solamente tiene uno: `https://www.cfreds.nist.gov`
+
+![](img/Pasted%20image%2020241220212646.png)
+
+- bb) ¿A qué página/s corresponden?
+
+Se corresponde con la página del NIST concretamente: *Computer Forensic Reference DataSet Portal*
+
+![](img/Pasted%20image%2020241220213212.png)
+
+- cc) ¿Qué expresiones o cadenas de búsqueda se han empleado en la app de Chrome?
+
+Se ha empleado únicamente "Cult of Mac":
+
+![](img/Pasted%20image%2020241220213448.png)
+
+- dd) ¿Cuántas veces se ha buscado la expresión "Cult of Mac"?
+
+Solamente una vez, como se aprecia en la captura anterior.
+
+- ee) ¿Cuántas entradas tiene la lista de sitios más visitados desde la app de Chrome?
+
+Tiene dos entradas:
+
+![](img/Pasted%20image%2020241220213730.png)
+
+- ff) ¿Cuáles fueron los sitios más visitados?
+
+Los sitios más visitados fueron: `https://www.espn.com/` y `https://www.starwars.com`
+
+- gg) ¿Cuántas entradas tiene el historial de sitios visitados en la app de Chrome?
+
+Tiene un total de 30 entradas:
+
+![](img/Pasted%20image%2020241220213911.png)
+
+- hh) ¿Cuál es la URL más reciente visitada desde la app de Chrome?
+
+La más reciente, si las filtramos por orden descendente es `https://en.m.wikipedia.org/wiki/The_Mandalorian`:
+
+![](img/Pasted%20image%2020241220214229.png)
+
+- ii) ¿Qué URL fue la más visitada desde la app de Chrome?
+
+La web más visitada fue: `https://www.cultofmac.com/`:
+
+![](Pasted%20image%2020241220214441.png)
+
+- jj) En qué fecha/hora se realizó la última visita a la URL `https://www.starwars.com/` desde la app de Chrome.
+
+Al subdirectorio `/news/star-wars-squadron-is-here` se accedió en 2020-10-04 14:14:15 mientras que a la web como tal `https://www.starwars.com/` se accedió en 2020-10-04 14:13:41
 
 # Práctica 5a
 
