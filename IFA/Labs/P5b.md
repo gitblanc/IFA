@@ -152,4 +152,4 @@ Los tres primeros paquetes son el handshake TCP:
 
 ![](img/Pasted%20image%2020241213142326.png)
 
-![](Pasted%20image%2020241213142513.png)
+![](img/Pasted%20image%2020241213142513.png)
