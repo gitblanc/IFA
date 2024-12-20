@@ -475,7 +475,7 @@ La más reciente, si las filtramos por orden descendente es `https://en.m.wikipe
 
 La web más visitada fue: `https://www.cultofmac.com/`:
 
-![](Pasted%20image%2020241220214441.png)
+![](img/Pasted%20image%2020241220214441.png)
 
 - jj) En qué fecha/hora se realizó la última visita a la URL `https://www.starwars.com/` desde la app de Chrome.
 
@@ -483,11 +483,118 @@ Al subdirectorio `/news/star-wars-squadron-is-here` se accedió en 2020-10-04 14
 
 # Práctica 5a
 
-28. 8 (apartados: i, j, k, l, m, n, o, p, q) (1 punto). Análisis de volcado de memoria principal con Volatility.
+## 28. (apartados: i, j, k, l, m, n, o, p, q) (1 punto). Análisis de volcado de memoria principal con Volatility.
+
+>[!Warning]
+>Este ejercicio se realiza con una máquina virtual de Windows 10 en un host Debian
+
+- i) Suponga que alguna de las IPs detectadas en el apartado d) se encuentra en una blacklist. Si el equipo está infectado por un Troyano, es normal que éste haya añadido una clave al registro de Windows para asegurarse de que se ejecutará en cada reinicio del sistema. Busque información sobre el comando printkey y aplíquelo para buscar información sobre la clave del registro "Microsoft\Windows NT\CurrentVersion\Winlogon"
+
+Se usará el siguiente comando:
+
+```cmd
+.\volatility_2.6_win64_standalone.exe -f windowsRAM.vmem --profile=WinXPSP2x86 printkeys -K "Microsoft\Windows NT\CurrentVersion\Winlogon"
+```
+
+![](img/Pasted%20image%2020241220225351.png)
+
+![](img/Pasted%20image%2020241220225605.png)
+
+Podemos apreciar los programas `userinit.exe` y `sdra64.exe`
+
+- j) Si ha realizado con éxito el apartado anterior, fíjese en el segundo valor de la subclave UserInit. Busque en internet información sobre ese ejecutable.
+
+El archivo sdra64.exe un componente del software de _desconocido_ propiedad de _desconocido_.
+
+**sdra64** son las siglas de Trojan.Zbot
+
+La mayoría de los programas antivirus identifican sdra64.exe como malware, como Microsoft lo identifica como un _VirTool:Win32/VBInject.gen!FU_, y Kaspersky lo identifica como un _Trojan.Win32.Scar.dowx_.
+
+Más información en [file.net](https://www.file.net/process/sdra64.exe.html)
+
+- k) Haga un volcado de los procesos que detectó en el apartado f) que no se correspondan con navegadores web. Utilice para ello el comando de volatility que permite extraer no solo el contenido de la memoria sino cualquier contenido en disco asociado a dicho proceso.
+
+Podemos sacar los procesos ejecutando el siguiente comando:
 
 
+```cmd
+.\volatility_2.6_win64_standalone.exe -f windowsRAM.vmem --profile=WinXPSP2x86 connscan
+```
 
-34. (imágenes: 2, 4 y 15) (0,5 puntos). Análisis de metadatos EXIF.
+![](img/Pasted%20image%2020241129141915.png)
+
+Vemos que hay dos procesos. Ejecutaremos el siguiente comando para extraer contenido de memoria y disco asociado a dicho proceso:
+
+```cmd
+.\volatility_2.6_win64_standalone.exe -f windowsRAM.vmem --profile=WinXPSP2x86 dumpfiles -p 856 -D .\
+```
+
+![](img/Pasted%20image%2020241220230529.png)
+
+![](img/Pasted%20image%2020241220230552.png)
+
+- l) Obtenga la firma hash de el/los fichero/s donde ha almacenado el volcado de/los proceso/s. Utilice para ello HashMyFiles que puede encontrar en la subcarpeta Nirsoft del CD de Caine.
+
+![](img/Pasted%20image%2020241220231137.png)
+
+- m) Compruebe en la página Web de VirusTotal (https://www.virustotal.com/gui/home/search) si se reconoce la firma hash del/los fichero/s volcados como software malicioso.
+
+![](img/Pasted%20image%2020241220231828.png)
+
+![](img/Pasted%20image%2020241220231917.png)
+
+![](img/Pasted%20image%2020241220231957.png)
+
+![](img/Pasted%20image%2020241220232127.png)
+
+![](img/Pasted%20image%2020241220232235.png)
+
+Hay varios de ellos que contienen Malware.
+
+- n) Los mutex son variables de exclusión mútua que se utilizan para serializar el acceso a una sección crítica en programación concurrente. Hay software malicioso que crea mutex con nombre para asegurarse que una sola instancia del programa malicioso se está ejecutando en el sistema. Utilice el comando mutant de Volatility para obtener todos los objetos KMUTANT pertenecientes a mutex con nombre.
+
+Ejecutaremos el siguiente comando:
+
+```cmd
+.\volatility_2.6_win64_standalone.exe -f windowsRAM.vmem --profile=WinXPSP2x86 mutantscan
+```
+
+![](img/Pasted%20image%2020241220232642.png)
+
+Se han encontrado los siguientes mutex: ZonesLockedCache, ZonesCounterMutex, ZonesCacheCounterMutex, SingleSesMutex, TpVcW32ListMutex, ShimCacheMutex, ExplorerisShellMutex, InteraciveLogonMutex, VMwareGuestCopyPasteMutex, WindowsUpdateTracingMutex, WininetStartupMutex y VMwareGuestDnDDataMutex
+
+- o) Observe la lista de mutex con nombre que aparecen en la salida del comando de la opción anterior. Muestre solamente las líneas en las que aparece la palabra AVIRA.
+
+Se ejecutará el siguiente comando:
+
+```cmd
+.\volatility_2.6_win64_standalone.exe -f windowsRAM.vmem --profile=WinXPSP2x86 mutantscan | findstr /i "AVIRA"
+```
+
+![](img/Pasted%20image%2020241220233320.png)
+
+- p) Busque en internet información sobre aquellas cadenas en las que figure AVIRA como subcadenas. ¿De qué tipo de software malicioso se trata?
+
+*Información extraída de [avira.com](https://www.avira.com/en/blog/the-claws-of-evilcode-gauntlet-xworm-rat)*
+
+Los **mutex** (objetos de sincronización en sistemas operativos) son utilizados por diversos tipos de software malicioso para garantizar que solo una instancia del malware se ejecute en el sistema. Algunos de estos mutex contienen la subcadena "AVIRA". Sin embargo, la presencia de "AVIRA" en el nombre del mutex no implica necesariamente una relación directa con el software de seguridad Avira.
+
+Por ejemplo, el ransomware **Money Message** crea un mutex único al iniciarse para evitar que otras instancias del malware se ejecuten simultáneamente. Este comportamiento es común en muchos tipos de malware, incluyendo troyanos de acceso remoto (RATs) como **XWorm**, que se propaga a través de correos electrónicos de spam y puede infectar sistemas con ransomware u otras amenazas.
+
+- q) Compruebe si el FireWall está deshabilitado ya que o bien lo tenía deshabilitado el usuario o bien fue deshabilitado por un software malicioso. Para ello compruebe el valor de la clave de registro "ControlSet001\Services\SharedAccess\Parameters\FirewallPolicy\StandardProfile". ¿Estaba el FireWall de Windows deshabilitado?
+
+Ejecutaremos el siguiente comando:
+
+```cmd
+.\volatility_2.6_win64_standalone.exe -f windowsRAM.vmem --profile=WinXPSP2x86 printkeys -K "ControlSet001\Services\SharedAccess\Parameters\FirewallPolicy\StandardProfile"
+```
+
+![](img/Pasted%20image%2020241220234007.png)
+
+Como hay un 0, el Firewall estaba deshabilitado.
+
+
+## 34. (imágenes: 2, 4 y 15) (0,5 puntos). Análisis de metadatos EXIF.
 
 
 
