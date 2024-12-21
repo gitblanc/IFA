@@ -8,20 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "c043a84f035568a0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "P5a.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "P5a"
-            }
-          },
-          {
             "id": "f1e8e4f6e2a95c21",
             "type": "leaf",
             "state": {
@@ -63,7 +49,8 @@
               "title": "Terminología"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -204,25 +191,26 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c043a84f035568a0",
+  "active": "4230f5a4b19b76ff",
   "lastOpenFiles": [
-    "Ejercicios_Entrega.md",
-    "P5a.md",
-    "img/Pasted image 20241220234007.png",
-    "img/Pasted image 20241220233320.png",
-    "img/Pasted image 20241220232642.png",
-    "img/Pasted image 20241220232235.png",
-    "img/Pasted image 20241220232127.png",
-    "img/Pasted image 20241220231957.png",
-    "img/Pasted image 20241220231917.png",
-    "img/Pasted image 20241220231828.png",
-    "img/Pasted image 20241220231137.png",
-    "img/Pasted image 20241220230552.png",
+    "img/Pasted image 20241221133852.png",
+    "img/Pasted image 20241221133431.png",
+    "img/Pasted image 20241221133230.png",
+    "img/Pasted image 20241221132641.png",
+    "img/Pasted image 20241221132517.png",
+    "img/Pasted image 20241221132454.png",
+    "img/Pasted image 20241221132446.png",
+    "img/Pasted image 20241221132421.png",
+    "img/Pasted image 20241221132019.png",
     "P5b.md",
+    "Ejercicios_Entrega.md",
+    "img/Pasted image 20241221131546.png",
+    "img/Pasted image 20241221131423.png",
+    "P5a.md",
+    "Terminología.md",
     "P4.md",
     "P3.md",
     "P2.md",
-    "Terminología.md",
     "pdfs/EjerciciosPrácticosEntregables(Diciembre2024).pdf",
     "pdfs/IFA-P5b-2024-25_signed.pdf",
     "pdfs/IFA-P5b-2024-25_signed.pdf.crdownload",

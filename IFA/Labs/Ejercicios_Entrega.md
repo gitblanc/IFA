@@ -415,7 +415,7 @@ Nació el 23 de Abril:
 
 Nació el 12 de Diciembre como se ve en la imagen del apartado anterior.
 
-## 9. Análisis de imagen lógica de smartphone con Aleapp. (apartados: aa, bb, cc, dd, ee, ff, gg, hh, ii, jj)
+## 9. Análisis de imagen lógica de smartphone con Aleapp.
 
 >[!Warning]
 >Este ejercicio se realiza con una máquina virtual de Windows 10 en un host Debian
@@ -594,18 +594,410 @@ Ejecutaremos el siguiente comando:
 Como hay un 0, el Firewall estaba deshabilitado.
 
 
-## 34. (imágenes: 2, 4 y 15) (0,5 puntos). Análisis de metadatos EXIF.
+## 34. (imágenes: 2, 4 y 15). Análisis de metadatos EXIF.
 
+>[!Warning]
+>Este ejercicio se realiza con una máquina virtual de Windows 10 en un host Debian
 
+- Primero descargaremos el fichero *imagenesP5.zip* del Campus Virtual.
+- Se van a utilizar las herramientas online **exif.tools** (ya que la versión en local me hace crashear la máquina virtual) y **metadatatogo.com**
 
-35. (ficheros: 3, 6 y 9) (0,5 puntos). Análisis de metadatos de ficheros.
+**Imagen 2**:
+- Fecha en la que fue tomada la imagen: 2024:07:30 09:19:20 +02:00
+- Ubicación. En caso de que dicha información no esté presente en los metadatos, trate de averiguarla a través de la búsqueda inversa de imágenes:  las coordenadas no están disponibles, por lo que se usará la extensión de google Reverse Image Search para buscar en distintos navegadores como Yandex o Google Lens. Se corresponde con el Palacio Ducal de Venecia, geolocalizado en 45.43383, 12.34039:
 
+![](img/Pasted%20image%2020241221105307.png)
 
-42. (apartados: a, b, c, d, e, f, g, h, i) (1 punto). Análisis de cabeceras de correo electrónico incluyendo recursos OSINT.
+![](img/Pasted%20image%2020241221105350.png)
 
+- Marca de la cámara: Samsung
+- Modelo de la cámara: SM-M135F
+- Modelo del teléfono en caso de haberse realizado con un Smartphone: No se indica, pero si en Google Buscamos el teléfono asociado a dicha cámara se corresponde con el Samsung Galaxy A13
+	- [Fuente](https://ultimainformatica.com/samsung-galaxy-a13-sm-a135f-ds-168-cm-66-android-12-4g-usb-tipo-c-3-gb-32-gb-5000-mah-negro.html?utm_source=chatgpt.com)
+- Año de lanzamiento del teléfono: 2022
+- Características de la imagen:
+	- Dimensión (ancho x alto) de la imagen en pixels: 4080x3060
+	- Resolución: 72 píxeles por pulgada tanto en X como en Y
+	- Bits de color por pixel: 8x3=24
+- Tamaño del archivo: 3 MiB
 
-45. (apartados: a, b, c, d, e, f, g) (1 punto). Análisis de registros de servicio móvil.
+![](img/Pasted%20image%2020241221105050.png)
+
+**Imagen 4**:
+- Fecha en la que fue tomada la imagen: 2024:08:02 12:36:20 +02:00
+- Ubicación. En caso de que dicha información no esté presente en los metadatos, trate de averiguarla a través de la búsqueda inversa de imágenes: las coordenadas no están disponibles, por lo que se usará la extensión de google Reverse Image Search para buscar en distintos navegadores como Yandex o Google Lens. Resulta ser el Palazzo della Ragione, en Verona, concretamente 45.44323, 10.99776:
+
+![](img/Pasted%20image%2020241221103359.png)
+
+![](img/Pasted%20image%2020241221103502.png)
+
+- Marca de la cámara: Samsung
+- Modelo de la cámara: SM-M135F
+- Modelo del teléfono en caso de haberse realizado con un Smartphone:  No se indica, pero si en Google Buscamos el teléfono asociado a dicha cámara se corresponde con el Samsung Galaxy A13
+	- [Fuente](https://ultimainformatica.com/samsung-galaxy-a13-sm-a135f-ds-168-cm-66-android-12-4g-usb-tipo-c-3-gb-32-gb-5000-mah-negro.html?utm_source=chatgpt.com)
+- Año de lanzamiento del teléfono: 2022
+- Características de la imagen:
+	- Dimensión (ancho x alto) de la imagen en pixels: 4080 x 3060
+	- Resolución: 72 píxeles por pulgada tanto en X como en Y
+	- Bits de color por pixel: 8x3=24 bits
+- Tamaño del archivo: 3MiB
+
+![](img/Pasted%20image%2020241221103127.png)
+
+**Imagen 15**:
+- Fecha en la que fue tomada la imagen: no aparece la fecha de creación sólo las MAC Times, por lo que vamos a tomar como su fecha de creación la MAC de modificación (la más fiable) 2024:12:21 09:40:49 +00:00
+- Ubicación. En caso de que dicha información no esté presente en los metadatos, trate de averiguarla a través de la búsqueda inversa de imágenes: De nuevo tampoco aparece la ubicación, por lo que usaremos navegadores como Google Lens o Yandex para averiguar su geolocalización. Se corresponde con la Librería pública de Brooklyng (Adams Street Library), situada en 40.70449, -73.98828:
+
+![](img/Pasted%20image%2020241221104434.png)
+
+![](img/Pasted%20image%2020241221104729.png)
+
+- Marca de la cámara: -
+- Modelo de la cámara: -
+- Modelo del teléfono en caso de haberse realizado con un Smartphone: -
+- Año de lanzamiento del teléfono: -
+- Características de la imagen:
+	- Dimensión (ancho x alto) de la imagen en pixels: 719x1600
+	- Resolución: 1 píxel por pulgada tanto en X como en Y
+	- Bits de color por pixel: 8x3=24
+- Tamaño del archivo: 162 KiB
+
+![](img/Pasted%20image%2020241221104114.png)
+
+# 35. (ficheros: 3, 6 y 9). Análisis de metadatos de ficheros.
+
+>[!Warning]
+>Este ejercicio se realiza con una máquina virtual de Windows 10 en un host Debian
+
+- Primero descargaremos el fichero *imagenesP5.zip* del Campus Virtual.
+- Se va a utilizar la herramienta **metadatatogo.com**
+
+**Fichero 3**:
+
+- Aplicación con la que se creó el archivo: Microsoft Word para Microsoft 365
+- Versión de la aplicación con la que se creó el fichero: 3.1-701
+- Autor: Rosa Fernández Tiesta
+- Empresa/organización donde se crea el documento: -
+- Fecha/hora de creación: 2024:01:31 09:55:56 +01:00
+- Fecha/hora modificación:  2024:01:31 09:55:56 +01:00
+- Fecha/hora modificación metadatos:  2024:01:31 09:55:56 CET
+- Número de páginas: 2
+- Tamaño del archivo: 183 kB
+
+![](img/Pasted%20image%2020241221110619.png)
+
+**Fichero 6**:
+
+- Aplicación con la que se creó el archivo: microsoft Office PowerPoint
+- Versión de la aplicación con la que se creó el fichero: 16
+- Autor: Usuario
+- Empresa/organización donde se crea el documento: -
+- Fecha/hora de creación: 2013:07:03 17:11:32Z
+- Fecha/hora modificación: 2018:10:05 14:11:15Z
+- Fecha/hora modificación metadatos: 2018:10:05 14:11:15Z
+- Número de páginas: 7
+- Tamaño del archivo: 126 kB
+
+![](img/Pasted%20image%2020241221111049.png)
+
+**Fichero 9**:
+
+- Aplicación con la que se creó el archivo: Microsoft Office Word
+- Versión de la aplicación con la que se creó el fichero: 16
+- Autor: BELEN DIEZ GONZALEZ
+- Empresa/organización donde se crea el documento: -
+- Fecha/hora de creación: 2020:07:06 11:42:00Z
+- Fecha/hora modificación: 2024:10:11 08:18:00Z
+- Fecha/hora modificación metadatos: 2024:10:11 08:18:00Z
+- Número de páginas: 11
+- Tamaño del archivo: 13 MB
+
+![](img/Pasted%20image%2020241221111626.png)
+
+## 42. Análisis de cabeceras de correo electrónico incluyendo recursos OSINT.
+
+>[!Warning]
+>Este ejercicio se realiza con una máquina virtual de Windows 10 en un host Debian
+
+> [!Info]
+> Se dispone de las siguientes urls para el ejercicio:
+> - [https://mha.azurewebsites.net/](https://mha.azurewebsites.net/) y [mxtoolbox](https://mxtoolbox.com/public/tools/emailheaders.aspx) para analizar cabeceras de correo
+> - [viewdns](https://viewdns.info/) para averiguar las ips
+> - [abuseipdb](https://www.abuseipdb.com) para saber si se trata de un sitio web calificado como malicioso
+> - [haveibeenpwned](https://haveibeenpwned.com) para comprobar si una dirección ha sido comprometida
+
+- Primero descargaremos el recurso **CabecerasMensajeSospechoso-2.txt** del Campus Virtual
+
+![](img/Pasted%20image%2020241221112608.png)
+
+- a) ¿Desde qué dirección IP se envió el mensaje?
+
+Desde la 156.35.11.135
+
+![](img/Pasted%20image%2020241221112843.png)
+
+- b) ¿Qué ISP gestiona el rango de IPs en el que está incluida dicha IP?
+
+Lo gestiona RedIris.es
+
+![](img/Pasted%20image%2020241221113026.png)
+
+- c) Averigüe a qué IPs estuvo vinculado el dominio desde el que se envió originalmente el correo.
+
+Analizaremos `dsr.ch`, y vemos que estuvo vinculado a la ip 212.40.14.9 en Suíza.
+
+![](img/Pasted%20image%2020241221114100.png)
+
+- d) ¿Cuántos dominios figuran vinculados a dicha IP en el momento actual?¿Figura el dominio desde el cual se envió el correo entre ellos?
+
+El correo se envió en 2019, por lo que si filtramos en viewdnsinfo nos sale un total de 5 dominios vinculados:
+
+![](img/Pasted%20image%2020241221114449.png)
+
+- e) ¿A qué organización está asociada la IP que hace de hosting del dominio investigado?
+
+Está asociada a ORG-VA3-RIPE (212.40.14.9):
+
+![](img/Pasted%20image%2020241221114550.png)
+
+- f) ¿Dónde está radicada el ISP correspondiente a la red anterior?
+
+Está en St. Alban-Anlage 44, Basilea (Suíza), correspondiente al ISP VTX Datacom AG.
+
+![](img/Pasted%20image%2020241221114837.png)
+
+- g) ¿Quién aparentemente es el remitente del correo?
+
+Se corresponde con `admin@dsrlab.ch`
+
+![](img/Pasted%20image%2020241221115031.png)
+
+- h) ¿Puede haber sido comprometida la dirección de correo que figura como remitente del mensaje?
+
+No podemos asegurar que haya sido comprometida:
+
+![](img/Pasted%20image%2020241221115155.png)
+
+- i) Comprueba si existe la dirección de correo del remitente del mensaje.
+
+Se utilizará la herramienta [email-checker](https://email-checker.net/check):
+
+![](img/Pasted%20image%2020241221115355.png)
+
+No podemos garantizar que la dirección de correo exista.
+
+## 45. Análisis de registros de servicio móvil.
+
+>[!Warning]
+>Este ejercicio se realiza con una máquina virtual de Windows 10 en un host Debian
+
+- Primero descargaremos el fichero *p5_tr_cell.csv* del Campus Virtual y lo importaremos:
+
+![](img/Pasted%20image%2020241221121326.png)
+
+- a) Identificación única internacional de la línea móvil (país y proveedor del servicio de origen y número de línea).
+
+Todos comparten el mismo **IMSI** -> 214 identifica como país a España, 07 indica como proveedor de servicio a movistar y 099999999 indica el  el número de teléfono (MSIN)
+
+- b) ¿Cuántos terminales móviles distintos aparecen registrados?
+
+Hay dos **IMEI** distintos: `862551036005121` y `862551036005121`, por lo que hay dos teminales móviles diferentes.
+
+- c) Identificación única internacional del terminal o terminales móviles utilizados (modelo, fabricante y si está incluido en la Blacklist de España).
+
+Para ello, se usará la web [imeicheck](https://imeicheck.com).
+
+- Vemos que el IMEI `862551036005121` se corresponde a un Huawei P8 Lite 2017:
+
+![](img/Pasted%20image%2020241221122550.png)
+
+- Comprobamos que no está en una BlackList:
+
+![](img/Pasted%20image%2020241221122844.png)
+
+- Vemos que el IMEI `862551036005121` se corresponde a un Motorola Defy:
+
+![](img/Pasted%20image%2020241221122708.png)
+
+- Comprobamos que no está en una BlackList:
+
+![](img/Pasted%20image%2020241221122758.png)
+
+- d) Indicar el soporte, especificado por el fabricante, en términos de tecnologías de acceso móvil 2G, 3G, 4G y 5G, para el terminal o terminales móviles implicados.
+
+La información relativa al Huawei se obtuvo en [Xataka](https://www.xatakamovil.com/otras/huawei-p8-lite-2017-inesperado-y-mejor-en-todo-que-el-original):
+- Soporta **2G** (GSM 850/900/1800/1900 MHz), **3G** (HSPA 850/900/1900/2100 MHz) y **4G** (LTE 1/3/7/8/20).
+
+La información relativa al Motorola se obtuvo en [Xataka](https://www.xataka.com/moviles/motorola-defy-caracteristicas-precio-ficha-tecnica):
+- Soporta **2G** (GSM 850/900/1800/1900 MHz),  **3G** (UMTS/HSPA 850/900/1900/2100 MHz) y  **4G** (LTE 1/3/5/7/8/20/28/38/40/41).
+
+- e) Enumerar los países en los que se ha registrado la línea móvil junto con los proveedores de servicio implicados en cada uno de ellos.
+
+Hay 4 **MCC**: 214 (España) con proveedor (columna Net) 1 que corresponde a Movistar y proveedor 7 que corresponde a Orange, 268 (Colombia) con proveedor 1 que corresponde a Claro Colombia, 748 (Chile) con proveedor 7 que corresponde a Entel Chile y 208 (Francia) con proveedor 1 que corresponde a Orange francia y proveedor 23 que corresponde a SFR (Société Française du Radiotéléphone)
+
+- f) Indicar si se ha producido roaming, nacional o internacional, y los países implicados.
+
+Sí se ha producido roaming internacional porque ha cambiado varias veces el CARRIER (MCC y NET) con los mencionados en el apartado anterior.
+
+- g) Indicar el recorrido posicional, en sentido temporal creciente e identificando con la máxima precisión posible dicha localización, que se ha registrado para la línea móvil entre el 23 de junio y el 29 de junio, ambos inclusive y correspondientes al año 2018.
+
+	- **Coordenada 1:**  
+	    **Latitud:** 43.356857, **Longitud:** -5.830819  
+	    **Ubicación:** se sitúa en el norte de España, cerca de la ciudad de Oviedo, en la región de Asturias.
+	- **Coordenada 2:**  
+	    **Latitud:** 43.377796, **Longitud:** -5.811434  
+	    **Ubicación:** Muy cerca de la anterior, en la misma región de Asturias.
+	- **Coordenada 3:**  
+	    **Latitud:** 43.374768, **Longitud:** -5.806961  
+	    **Ubicación:** Sigue en la región de Asturias, desplazándonos ligeramente dentro de la misma área.
+	- **Coordenada 4:**  
+	    **Latitud:** 41.236495, **Longitud:** -8.657913  
+	    **Ubicación:** Se desplaza hacia el suroeste, cerca de Oporto, en Portugal.
+	- **Coordenada 5:**  
+	    **Latitud:** 38.724746, **Longitud:** -9.194870  
+	    **Ubicación:** Al sur de Lisboa, en Portugal.
+	- **Coordenada 6:**  
+	    **Latitud:** -34.844724, **Longitud:** -56.191399  
+	    **Ubicación:** Ahora en el hemisferio sur, en Uruguay, cerca de la ciudad de Paysandú.
+	- **Coordenada 7:**  
+	    **Latitud:** -34.854829, **Longitud:** -56.157214  
+	    **Ubicación:** Muy cerca de la anterior, en la misma región de Uruguay.
+	- **Coordenada 8:**  
+	    **Latitud:** -33.376917, **Longitud:** -58.100671  
+	    **Ubicación:** En el noreste de Uruguay, cerca de la frontera con Argentina.
 
 # Práctica 5b
 
-3. (todos los apartados) (1 punto). Análisis de resolución DNS mediante sondeo de interfaz de red en cliente web con Wireshark.
+## 3. Análisis de resolución DNS mediante sondeo de interfaz de red en cliente web con Wireshark.
+
+>[!Warning]
+>Este ejercicio se realiza con una máquina virtual de Windows 10 en un host Debian, ya que en clase en lugar de usar Caine se nos indicó usar Windows
+
+- a) Rellenar información de la tabla proporcionada.
+
+| Descripción                     | Configuración     |
+| ------------------------------- | ----------------- |
+| Dirección IPv4                  | 10.0.2.15/16      |
+| Dirección MAC                   | 08-00-27-4A-FF-73 |
+| Dirección IPv4 de la pasarela   | 10.0.2.2          |
+| Dirección IPv4 del servidor DNS | 10.0.2.3          |
+
+![](img/Pasted%20image%2020241221130442.png)
+
+- b) En una ventana de terminal introduce wireshark & para iniciar Wireshark. Haga clic en Aceptar para continuar.
+
+Se va a abrir directamente en Windows:
+
+![](img/Pasted%20image%2020241221130947.png)
+
+- c) En la ventana de Wireshark selecciona con doble clic, en el apartado Captura, el interfaz desde el cual va a capturar los paquetes.
+
+Capturaremos la interfaz Ethernet:
+
+![](img/Pasted%20image%2020241221131029.png)
+
+- d) Abre el navegador web y dirígete a www.google.com.
+
+![](img/Pasted%20image%2020241221131206.png)
+
+- e) Haga clic en Stop (Detener) para detener la captura de Wireshark cuando vea la página de inicio de Google.
+
+![](img/Pasted%20image%2020241221131235.png)
+
+- f) En la ventana principal de Wireshark, escriba dns en el campo Filter (Filtro). Haga clic en Apply (Aplicar).
+
+![](img/Pasted%20image%2020241221131306.png)
+
+- g) En el panel de lista de paquetes (sección superior) de la ventana principal, localice el paquete que incluye Standard query (Consulta estándar) y A www.google.com. Observe la trama 19 anterior como ejemplo.
+
+![](img/Pasted%20image%2020241221131423.png)
+
+- h) Los campos del paquete, resaltados en color gris, se muestran en el panel de detalles del paquete (sección media) de la ventana principal. En la primera línea del panel de detalles del paquete, la trama 19 tiene 85 bytes de datos transmitidos (on wire). Esta es la cantidad de bytes que se necesitó para enviar una consulta DNS a un servidor con nombre que está solicitando las direcciones IP de www.google.com. Si utilizaste otra dirección web, la cantidad de bytes podría ser diferente.
+
+En mi caso tiene 73 bytes de datos transmitidos (on wire):
+
+![](img/Pasted%20image%2020241221131546.png)
+
+- i) La línea Ethernet II muestra las direcciones MAC de origen y destino. La dirección MAC de origen proviene de su máquina virtual porque su máquina virtual fue la que originó la consulta DNS. La dirección MAC de destino proviene del gateway predeterminado porque esta es la última parada antes de que esta consulta salga de la red local. ¿Es la dirección MAC de origen la misma que la registrada en la Parte 1 para la VM?
+
+En Wireshark la MAC se corresponde con `08:00:27:4a:ff:73` idéntica a la del apartado.
+
+- j) En la línea del Protocolo de Internet Versión 4 (IPv4), la captura del paquete IP Wireshark indica que la dirección IP de origen de esta consulta de DNS es 192.168.22.25 (en este ejemplo) y la dirección IP de destino es 192.168.22.1 (en este ejemplo). ¿Puede identificar la dirección IP y dirección MAC de origen y destino de este paquete?
+
+| Dispositivo                                 | Dirección IP | Dirección MAC     |
+| ------------------------------------------- | ------------ | ----------------- |
+| Máquina virtual cliente                     | 10.0.2.15    | 08:00:27:4a:ff:73 |
+| Destino servidor DNS/Gateway predeterminado | 10.0.2.3     | 52:55:0a:00:02:03 |
+
+![](img/Pasted%20image%2020241221131546.png)
+
+![](img/Pasted%20image%2020241221132019.png)
+
+- k) El paquete IP y el encabezado encapsulan el segmento de UDP. El segmento de UDP contiene la consulta de DNS como datos. Haga clic en la flecha contigua a User Datagram Protocol para ver los detalles. Observa que solo hay cuatro campos. El número del puerto de origen en este ejemplo es 39303. La MV generó de manera aleatoria el puerto de origen utilizando números de puerto que no están reservados. El puerto de destino es 53. El puerto 53 es un puerto conocido reservado para el uso con DNS. Los servidores DNS esperan en el puerto 53 las consultas de DNS de los clientes.
+
+![](img/Pasted%20image%2020241221132446.png)
+
+![](img/Pasted%20image%2020241221132454.png)
+
+En este ejemplo, la longitud del segmento de UDP es de 51 bytes. La longitud del
+segmento UDP de su ejemplo puede ser diferente. De los 51 bytes, 8 bytes se utilizan
+como encabezado. Los datos de la consulta de DNS utilizan los otros 43 bytes. Los 43
+bytes de los datos de consulta DNS están el panel de bytes del paquete (sección
+inferior) de la ventana principal de Wireshark.
+
+![](img/Pasted%20image%2020241221132517.png)
+
+En este ejemplo, la dirección de destino es la del servidor DNS.
+
+En mi caso se corresponde con lo siguiente:
+
+![](img/Pasted%20image%2020241221132421.png)
+
+- l) Haz clic en la flecha que se encuentra a la izquierda de los Flags. Un valor de 1 significa que el flag está definido. Localice el flag que está definido en este paquete.
+
+Está definido el flag de "Recursion desired":
+
+![](img/Pasted%20image%2020241221132641.png)
+
+- m) El checksum es usado para determinar la integridad del encabezado de UDP después de haber atravesado Internet. El encabezado de UDP tiene poca sobrecarga porque UDP no tiene campos que estén asociados con el protocolo de enlace de tres vías en TCP. Cualquier problema de confiabilidad de la transferencia de datos que ocurra debe ser manejado por la capa de aplicación. Expanda lo necesario para ver los detalles. Registre sus resultados de Wireshark en la tabla siguiente:
+
+| Descripción        | Resultado Wireshark |
+| ------------------ | ------------------- |
+| Tamaño de la trama | 39                  |
+| MAC origen         | 08:00:27:4a:ff:73   |
+| MAC destino        | 52:55:0a:00:02:03   |
+| IP origen          | 10.0.2.15           |
+| IP destino         | 10.0.2.3            |
+| Puerto origen      | 59155               |
+| Puerto destino     | 53                  |
+
+![](img/Pasted%20image%2020241221132421.png)
+
+- n) ¿Es la dirección IP de origen la misma que la dirección IP de la MV que registró en la parte 1?
+
+Sí, ambas direcciones son la `10.0.2.15`.
+
+- o) ¿Es la dirección IP de destino la misma que la puerta de enlace predeterminada (gateway) que observó en la parte 1?
+
+Sí, ambas direcciones son la `10.0.2.3`.
+
+- p) En la trama Ethernet II para la respuesta de DNS, ¿qué dispositivo es la dirección MAC de origen y qué dispositivo es la dirección MAC de destino?
+
+En la trama Ethernet II para la respuesta de DNS, ¿qué dispositivo es la dirección
+MAC de origen y qué dispositivo es la dirección MAC de destino?
+
+En mi caso, la MAC de origen es `52:55:0a:00:02:03` (de la puerta de enlace) y la MAC destino es `08:00:27:4a:ff:73` (de mi máquina Windows).
+
+![](img/Pasted%20image%2020241221133230.png)
+
+- q) Observe las direcciones IP de origen y destino en este paquete IP. ¿Cuál es la dirección IP de destino? ¿Cuál es la dirección IP de origen? ¿Qué sucedió con los roles de origen y destino correspondientes a la VM y al gateway predeterminado?
+
+![](img/Pasted%20image%2020241221133431.png)
+
+En ese paquete, la dirección IP de destino es la `192.168.22.25` y la dirección IP de origen es la `192.168.22.1`. En resumen, la dirección IP de origen (`192.168.22.1`) parece corresponder al **gateway predeterminado**, mientras que la dirección IP de destino (`192.168.22.25`) parece corresponder a un dispositivo (probablemente una **VM**) dentro de la misma red. Esto indica que el paquete está siendo enviado desde el gateway hacia la VM o dispositivo de destino.
+
+- r) En el segmento UDP, el rol de los números de puerto también se invirtió. El número del puerto de destino es 39303. El número de puerto 39303 es el mismo puerto que generó la MV cuando se envió la consulta DNS al servidor DNS. La MV espera una respuesta DNS en este puerto. El número del puerto de origen es 53. El servidor DNS espera una consulta de DNS en el puerto 53 y luego envía una respuesta de DNS con un número de puerto de origen 53 al originador de la consulta de DNS. Al expandirse la respuesta de DNS, observa las direcciones IP resueltas para www.google.com en la sección Answers (Respuestas) y captura la pantalla resaltando dicha información.
+
+Vemos que hay una respuesta de `142.250.200.131`
+
+![](img/Pasted%20image%2020241221133852.png)
