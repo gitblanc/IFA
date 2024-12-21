@@ -322,7 +322,7 @@ Sí muestran los mismos registros (dado que la ingestión duplicó algunos regis
 
 Un total de 10 ficheros con MIME Type mp4:
 
-![](img/Pasted%20image%2020241220201207.png)
+![](img/Pasted%20image%2020241221222726.png)
 
 - xx) ¿De qué marca es el ordenador portátil que aparece en el vídeo 20181114_163729.mp4?
 
@@ -526,40 +526,128 @@ Podemos sacar los procesos ejecutando el siguiente comando:
 Vemos que hay dos procesos. Ejecutaremos el siguiente comando para extraer contenido de memoria y disco asociado a dicho proceso:
 
 ```cmd
-.\volatility_2.6_win64_standalone.exe -f windowsRAM.vmem --profile=WinXPSP2x86 dumpfiles -p 856 -D .\
+.\volatility_2.6_win64_standalone.exe -f windowsRAM.vmem --profile=WinXPSP2x86 procdump -p 856 -D .\
 ```
 
-![](img/Pasted%20image%2020241220230529.png)
+![](img/Pasted%20image%2020241221223404.png)
 
-![](img/Pasted%20image%2020241220230552.png)
 
 - l) Obtenga la firma hash de el/los fichero/s donde ha almacenado el volcado de/los proceso/s. Utilice para ello HashMyFiles que puede encontrar en la subcarpeta Nirsoft del CD de Caine.
 
-![](img/Pasted%20image%2020241220231137.png)
+![](img/Pasted%20image%2020241221223610.png)
 
 - m) Compruebe en la página Web de VirusTotal (https://www.virustotal.com/gui/home/search) si se reconoce la firma hash del/los fichero/s volcados como software malicioso.
+![](img/Pasted%20image%2020241221223721.png)
 
-![](img/Pasted%20image%2020241220231828.png)
-
-![](img/Pasted%20image%2020241220231917.png)
-
-![](img/Pasted%20image%2020241220231957.png)
-
-![](img/Pasted%20image%2020241220232127.png)
-
-![](img/Pasted%20image%2020241220232235.png)
-
-Hay varios de ellos que contienen Malware.
+Por lo tanto, el archivo no contiene ningún virus.
 
 - n) Los mutex son variables de exclusión mútua que se utilizan para serializar el acceso a una sección crítica en programación concurrente. Hay software malicioso que crea mutex con nombre para asegurarse que una sola instancia del programa malicioso se está ejecutando en el sistema. Utilice el comando mutant de Volatility para obtener todos los objetos KMUTANT pertenecientes a mutex con nombre.
 
 Ejecutaremos el siguiente comando:
 
 ```cmd
-.\volatility_2.6_win64_standalone.exe -f windowsRAM.vmem --profile=WinXPSP2x86 mutantscan
+.\volatility_2.6_win64_standalone.exe -f windowsRAM.vmem --profile=WinXPSP2x86 mutantscan --silent > mutex.txt
 ```
 
 ![](img/Pasted%20image%2020241220232642.png)
+
+Si eliminamos manualmente los que no tiene nombre nos da un total de 94 mutex:
+
+```txt
+0x000000000105aa38        7        6      1 0x00000000           _!MSFTHISTORY!_
+0x000000000105acf0        2        1      0 0xff3ba880   888:912 wscntfy_mtx
+0x0000000001061fe0        2        1      1 0x00000000           542B5ABE01CB391B000003A82
+0x00000000010633b8        2        1      1 0x00000000           msgina: InteractiveLogonRequestMutex
+0x0000000001066480        2        1      1 0x00000000           PerfOS_Perf_Library_Lock_PID_684
+0x00000000010669d0        2        1      1 0x00000000           winlogon: Logon UserProfileMapping Mutex
+0x0000000001066bd0        2        1      1 0x00000000           PerfProc_Perf_Library_Lock_PID_684
+0x00000000010676d8        2        1      1 0x00000000           RemoteAccess_Perf_Library_Lock_PID_684
+0x0000000001069fa8        2        1      1 0x00000000           WmiApRpl_Perf_Library_Lock_PID_684
+0x000000000106fb60        3        2      1 0x00000000           WininetProxyRegistryMutex
+0x0000000001070380        2        1      1 0x00000000           Spooler_Perf_Library_Lock_PID_684
+0x00000000010719b0        2        1      1 0x00000000           ContentFilter_Perf_Library_Lock_PID_684
+0x000000000107a2b0        2        1      1 0x00000000           54D23F5A01CB391B0000047C2
+0x000000000107b290        2        1      1 0x00000000           c:!windows!system32!config!systemprofile!cookies!
+0x0000000001093c90        4        3      1 0x00000000           ZonesLockedCacheCounterMutex
+0x00000000010bbf10        2        1      1 0x00000000           Tcpip_Perf_Library_Lock_PID_684
+0x00000000010bc140        2        1      1 0x00000000           MSDTC_Perf_Library_Lock_PID_684
+0x00000000010bc550        2        1      1 0x00000000           PerfDisk_Perf_Library_Lock_PID_684
+0x00000000010bc750        2        1      1 0x00000000           PerfNet_Perf_Library_Lock_PID_684
+0x00000000010bcc38        2        1      1 0x00000000           TapiSrv_Perf_Library_Lock_PID_684
+0x00000000010bed60        2        1      1 0x00000000           TermService_Perf_Library_Lock_PID_684
+0x00000000010c9898        4        3      1 0x00000000           ZonesCounterMutex
+0x00000000010d4030        2        1      1 0x00000000           ISAPISearch_Perf_Library_Lock_PID_684
+0x00000000010d61e8        2        1      1 0x00000000           userenv: User Registry policy mutex
+0x00000000010d9a50        2        1      1 0x00000000           53AF607601CB391B000002A42
+0x00000000010dd398        2        1      1 0x00000000           ContentIndex_Perf_Library_Lock_PID_684
+0x0000000001119730        2        1      1 0x00000000           RAS_MO_02
+0x000000000111eb40        2        1      1 0x00000000           c:!windows!system32!config!systemprofile!local settings!history!history.ie5!
+0x00000000011211a8        4        3      1 0x00000000           ZonesCacheCounterMutex
+0x000000000112da78        2        1      1 0x00000000           5C9DCF9C01CB391B000007B02
+0x000000000112f388        3        2      1 0x00000000           SRDataStore
+0x000000000112f688        2        1      1 0x00000000           55319D6A01CB391B000005982
+0x0000000001130ef8        3        2      1 0x00000000           c:!documents and settings!administrator!cookies!
+0x000000000113f1b8        2        1      1 0x00000000           c:!windows!system32!config!systemprofile!local settings!temporary internet files!content.ie5!
+0x00000000011465c8        3        2      1 0x00000000           c:!documents and settings!administrator!local settings!temporary internet files!content.ie5!
+0x000000000114e9c0        2        1      1 0x00000000           userenv: Machine Registry policy mutex
+0x000000000115ed38        2        1      1 0x00000000           SingleSesMutex
+0x000000000115f628        2        1      0 0xff398638  1732:680 Instance0:  ESENT Performance Data Schema Version 40
+0x00000000011633c0        2        1      1 0x00000000           839553D201CB391B000006C42
+0x0000000001163898        2        1      1 0x00000000           C1EA8C7801CB391B000006BC2
+0x000000000211a230        5        4      1 0x00000000           TpVcW32ListMutex
+0x00000000024c9ef8        2        1      1 0x00000000           PSched_Perf_Library_Lock_PID_684
+0x00000000043d21b8        2        1      1 0x00000000           53EAFB4001CB391B0000034C2
+0x00000000043d62a0        2        1      1 0x00000000           0CADFD67AF62496dB34264F000F5624A
+0x000000000441a380        2        1      1 0x00000000           C3CCBBD401CB391B000001C42
+0x0000000004866dc8        2        1      1 0x00000000           c:!documents and settings!networkservice!local settings!history!history.ie5!
+0x00000000048f8fb0        2        1      1 0x00000000           543E6D8E01CB391B000004402
+0x0000000004a064f8        9        8      1 0x00000000           ShimCacheMutex
+0x0000000004a06c00        2        1      1 0x00000000           5A50EAC601CB391B000006842
+0x0000000004a4ad70        2        1      1 0x00000000           647C72AE01CB391B0000043C2
+0x0000000004b58900        2        1      1 0x00000000           6303BF2201CB391B000003782
+0x0000000004b5c668        2        1      1 0x00000000           HGFSMUTEX00000000000242b4
+0x0000000004be4410        2        1      1 0x00000000           userenv: user policy mutex
+0x0000000004c2d6b8        2        1      1 0x00000000           5C2B5EBC01CB391B000006FC2
+0x00000000054707e0        2        1      1 0x00000000           238FAD3109D3473aB4764B20B3731840
+0x00000000054714b0        3        2      1 0x00000000           c:!documents and settings!localservice!local settings!temporary internet files!content.ie5!
+0x00000000054716f8        2        1      1 0x00000000           4FCC0DEFE22C4f138FB9D5AF25FD9398
+0x00000000055379d8        2        1      1 0x00000000           WPA_LICSTORE_MUTEX
+0x0000000005537a28        2        1      1 0x00000000           WPA_HWID_MUTEX
+0x0000000005537a78        2        1      1 0x00000000           WPA_LT_MUTEX
+0x0000000005537ac8        2        1      1 0x00000000           WPA_RT_MUTEX
+0x00000000055fe480        2        1      1 0x00000000           WPA_PR_MUTEX
+0x0000000005c16378        2        1      1 0x00000000           c:!documents and settings!networkservice!cookies!
+0x0000000005c18f08        3        2      1 0x00000000           MidiMapper_modLongMessage_RefCnt
+0x0000000005c9f978        2        1      1 0x00000000           C70DD0D201CB391B000001D42
+0x0000000005c9fb30        2        1      1 0x00000000           5CE2F3CE01CB391B000000D82
+0x0000000005ca17e8        2        1      1 0x00000000           _AVIRA_2108
+0x0000000005ce3e60        2        1      1 0x00000000           C39837F001CB391B000001B02
+0x0000000005ce5dd0        2        1      1 0x00000000           _SHuassist.mtx
+0x0000000005d281f0        2        1      1 0x00000000           746bbf3569adEncrypt
+0x0000000005e7ffe0        3        2      1 0x00000000           MidiMapper_Configure
+0x0000000005f01c68        2        1      1 0x00000000           ExplorerIsShellMutex
+0x0000000005f024d8        2        1      1 0x00000000           RAS_MO_01
+0x0000000005f45148        7        6      1 0x00000000           SHIMLIB_LOG_MUTEX
+0x0000000005f45e48        2        1      1 0x00000000           msgina: InteractiveLogonMutex
+0x0000000005f48ba8        2        1      1 0x00000000           DBWinMutex
+0x0000000005fd0b38        3        2      1 0x00000000           c:!documents and settings!localservice!cookies!
+0x0000000005fd4eb0        3        2      1 0x00000000           c:!documents and settings!administrator!local settings!history!history.ie5!
+0x0000000006016b88        2        1      1 0x00000000           VMwareGuestCopyPasteMutex
+0x0000000006017ee8        3        2      1 0x00000000           ThinPrint-L
+0x0000000006017fe0        2        1      1 0x00000000           c:!documents and settings!networkservice!local settings!temporary internet files!content.ie5!
+0x00000000061ee258        2        1      1 0x00000000           PnP_Init_Mutex
+0x0000000006234b58        2        1      1 0x00000000           5434E42601CB391B000004042
+0x00000000062354d8        2        1      1 0x00000000           VMToolsHookQueueLock
+0x00000000062363a0        2        1      1 0x00000000           53B1C2D001CB391B000002B02
+0x0000000006383150        2        1      1 0x00000000           userenv: machine policy mutex
+0x000000000644e898        3        2      1 0x00000000           c:!documents and settings!localservice!local settings!history!history.ie5!
+0x000000000644eeb0        5        4      1 0x00000000           WindowsUpdateTracingMutex
+0x00000000064951d0        3        2      1 0x00000000           WininetStartupMutex
+0x00000000066f68b0        5        4      1 0x00000000           RasPbFile
+0x00000000067358a8        2        1      1 0x00000000           RSVP_Perf_Library_Lock_PID_684
+0x0000000006735dc0        2        1      1 0x00000000           _AVIRA_2109
+0x0000000006b1a460        2        1      1 0x00000000           VMwareGuestDnDDataMutex    
+```
 
 Se han encontrado los siguientes mutex: ZonesLockedCache, ZonesCounterMutex, ZonesCacheCounterMutex, SingleSesMutex, TpVcW32ListMutex, ShimCacheMutex, ExplorerisShellMutex, InteraciveLogonMutex, VMwareGuestCopyPasteMutex, WindowsUpdateTracingMutex, WininetStartupMutex y VMwareGuestDnDDataMutex
 
